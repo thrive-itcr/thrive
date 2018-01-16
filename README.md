@@ -13,7 +13,7 @@ Users can plug in their own algorithms, resulting in a flexible, powerful image 
 
 See the [THRIVE project web site](http://www.csb.pitt.edu/ith/index.html).  
  
- THRIVE is built using the __Rt. 106__ biomedical analytics framework, to be released imminently by GE Global Research.
+ THRIVE is built using the [Rt. 106](https://github.com/rt106) biomedical analytics framework, developed by [GE Global Research](https://www.geglobalresearch.com/) and released as open source.
  
 ## Features of THRIVE
 
@@ -35,17 +35,17 @@ See the [THRIVE project web site](http://www.csb.pitt.edu/ith/index.html).
 
 ## THRIVE Roadmap
 
-* Q4 2017
+* Q1 2018
   * Initial deployment in github and Dockerhub to solicit community feedback.
   * Runs against provided sample dataset.
-* Q1 2018
+* Q2 2018
   * Tools for uploading user-provided pathology images.
   * Additional algorithms for intra-cellular heterogeneity.
   * Expanded set of automated system tests to ensure quality.
-* Q2 2018
+* Q3 2018
   * Hands-on support for beta users to contribute more heterogeneity algorithms.
   * Tools for capturing community feedback on algorithms.
-* 2018+ (to be prioritized based on user community input)
+* Q4 2018 and beyond (to be prioritized based on user community input)
   * Machine-learning capability to classify cell types.
   * Whole-slide image viewing.
   * Whole-slide image analytics.
