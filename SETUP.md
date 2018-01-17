@@ -48,7 +48,7 @@ libraries and may take 30 minutes or more.  The other builds should all be fairl
 ## Build THRIVE Docker images
 
 For THRIVE Docker images, you have the same two choices as for Rt.106: (1) clone the source code for THRIVE and build 
-the Docker images yourself, or (2) download the Docker images from the THRIVE Dockerhub repository.  __NEED TO CREATE THRIVE DOCKERHUB REPO__
+the Docker images yourself, or (2) download the Docker images from the THRIVE Dockerhub repository.
 
 Again, for option (2), you don't need to do anything at this stage.
 
@@ -57,14 +57,10 @@ To proceed, you will need to clone the following repositories from the
 [THRIVE github site](https://github.com/thrive-itcr) 
 and build their corresponding Docker images as per the README file in each repository:
 
-__Newer DOCKERFILE Conventions?__
-
-__Add NO_PROXY cases to README files__
-
 * __NEED TO ADD Whole_Cell_Segmentation__
 * multicompartment-cell-quantification
 * simple-heterogeneity-metrics
-* thrive-app   __different image name?__
+* thrive-app
 
 ## Set up environment variables
 
