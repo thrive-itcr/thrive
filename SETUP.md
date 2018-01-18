@@ -37,7 +37,7 @@ Windows paths  will start with a drive letter (e.g. "C:").  Forward slashes in t
 
 ## Run THRIVE
 
-In your thrive-app directory, you should now be able to successfully run:
+In your thrive directory, you should now be able to successfully run:
 
 ```
 docker-compose up

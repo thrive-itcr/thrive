@@ -87,13 +87,13 @@ services:
       MSG_SYSTEM: amqp
       SERVICE_NAME: multi-compartment-cell-quantification--v1_0_0
       SERVICE_TAGS: analytic
-  heterogeneity-metrics:
-    image: thriveitcr/heterogeneity-metrics:latest
+  simple-heterogeneity-metrics:
+    image: thriveitcr/simple-heterogeneity-metrics:latest
     ports:
     - 7106
     environment:
       MSG_SYSTEM: amqp
-      SERVICE_NAME: heterogeneity-metrics--v1_0_0
+      SERVICE_NAME: simple-heterogeneity-metrics--v1_0_0
       SERVICE_TAGS: analytic
 
 volumes:
