@@ -3,7 +3,8 @@ This document tells you how to set up your own local installation of THRIVE.
 
 ## Prerequisites
 * You need to have Docker running on your system, including Docker Compose.  Docker is cross platform and can be used on Linux, Mac, and Windows. On Windows and Mac, we recommend Docker for Windows and Docker for Mac over the older Docker Toolbox.
-* You should clone this git repository located at https://github.com/thrive-itcr/thrive.  
+* For managing local files against the THRIVE source code in github, you should have a git client.
+* You should clone [this git repository](https://github.com/thrive-itcr/thrive) for documentation files and the Docker Compose script needed to run THRIVE.  
 
 ## Unpack demo data
 Create a directory where you would like to keep your demo data.  This can be called any directory that you choose.  For these examples, let's assume you have created a subdirectory called **THRIVEdata**.
@@ -19,61 +20,16 @@ You should have a directory structure like this:
   - Slides
     - (slide data here)
     
-## Build Rt.106 Docker images
-
-THRIVE leverages the Rt.106 analytics platform.  You will need a subset of the Rt. 106 Docker images.
-There are two different ways to achieve this: (1) clone the source code for Rt.106 and build the Docker images
-youself, or (2) download the Docker images from the [Rt106 Dockerhub repository](https://hub.docker.com/u/rt106/).
-
-For (2), you don't need to do anything at this stage.
-
-You only need to use approach (1) if you intend to modify Rt106 itself.  To proceed, 
-you will need to clone the following repositories from the [Rt106 github site](https://github.com/rt106) 
-and build their corresponding Docker images as per the README file in each repository:
-
-* rt106-algorithm-sdk
-* rt106-wavelet-nuclei-segmentation
-* rt106-datastore
-* rt106-datastore-local
-* rt106-mysql
-* rt106-rabbitmq
-* rt106-frontend
-
-There is an order dependency among some of these.  If you build the images in the sequence shown,
-that will satisfy the order dependency.
-
-rt106-wavelet-nuclei-segmentation has a two step build process.  The first step compiles a number of third-party
-libraries and may take 30 minutes or more.  The other builds should all be fairly quick.
-
-## Build THRIVE Docker images
-
-For THRIVE Docker images, you have the same two choices as for Rt.106: (1) clone the source code for THRIVE and build 
-the Docker images yourself, or (2) download the Docker images from the THRIVE Dockerhub repository.
-
-Again, for option (2), you don't need to do anything at this stage.
-
-You only need to use approach (1) if you intend to modify the THRIVE application or supplied algorithms.
-To proceed, you will need to clone the following repositories from the 
-[THRIVE github site](https://github.com/thrive-itcr) 
-and build their corresponding Docker images as per the README file in each repository:
-
-* __NEED TO ADD Whole_Cell_Segmentation__
-* multicompartment-cell-quantification
-* simple-heterogeneity-metrics
-* thrive-app
-
 ## Set up environment variables
 
-If you did not create a clone of the thrive-app repository in the previous step,
-please do so now.
-
-Within that directory, create a file called .env that contains this line:
+Within your directory that contains the file docker-compose.yml (see Prerequisites above),
+ create a file called .env that contains this line:
 
 ```
 LOCAL_DATA_DIR=/your/data/root
 ```
 
-There are other environment variable options, but this setting will allow you to run the basic THRIVE application.
+(There are other environment variable options, but this setting will allow you to run the basic THRIVE application.)
 
 Be sure to set /your/data/root to the path at the top of your data directory structure from the previous step, perhaps ending in __THRIVEdata__.
 
@@ -87,14 +43,18 @@ In your thrive-app directory, you should now be able to successfully run:
 docker-compose up
 ```
 
-This command should either run your locally-built Docker images or download them (the first time)
-from Docker Hub, depending on whether you built the images in the steps above.
+The first time you run this command, the needed Docker images will be downloaded from Docker Hub.
 
 In your console you will see many diagnostic messages from all the Docker containers.  This is normal.
 Startup may take a couple of minutes, especially the first time which sets up and initializes the THRIVE database.
 
 ## Try it out
 Assuming the steps above were successful, start a web browser (Chrome recommended).  Go to http://localhost:81.  You should see THRIVE running in the browser.
+
+For a sample scenario that you can run with THRIVE, see the sample video.  (Coming soon!)
+
+If you experience any issues with THRIVE, for the time being, please contact [Brion Sarachan](mailto:sarachan@ge.com) and [Chakra Chennubhotla](mailto:chakracs@pitt.edu).
+In the near future we will be establishing a more formal method for logging issues.
 
 ## Shut down THRIVE
 
@@ -106,3 +66,36 @@ It is good practice to also clean up docker by running:
 ```
 docker-compose down
 ```
+
+## Developing new capabilities for THRIVE
+
+You could contribute capabilities to THRIVE in several ways:
+* New heterogeneity (or related) algorithms.
+* New visualization or display capabilities.
+* Improvements to existing platform.
+
+Each of these will be briefly described below.
+
+For any of these changes, please coordinate with the THRIVE team 
+(contacts [Brion Sarachan](mailto:sarachan@ge.com) and [Chakra Chennubhotla](mailto:chakracs@pitt.edu)) on how to have your changes 
+added to the THRIVE release.
+
+### Adding a new algorithm.
+
+Please refer to [ALGORITHM_SDK.md](https://github.com/thrive-itcr/thrive/blob/master/ALGORITHM_SDK.md) in github
+or in your own clone of the github THRIVE repository.
+
+### Adding a new visualization of display capability.
+
+These changes would likely be in [thrive-app](https://github.com/thrive-itcr/thrive-app).
+Please clone that git repository and refer to the 
+[Rt106 Custom Application](https://github.com/rt106/rt106.github.io/blob/master/CUSTOM_APPLICATION_SDK.md) documentation.
+
+### Improvements to the existing platform.
+
+These may be the most complex changes that you would make.  If you are interested, you have
+access to all the open source code for [THRIVE](https://github.com/thrive-itcr)
+and its underlying [Rt106](https://github.com/rt106) framework.  We suggest contacting the
+THRIVE or Rt106 teams to discuss what you have in mind.
+
+
