@@ -53,12 +53,12 @@ services:
     depends_on:
     - "rabbitmq"
   # web server for seed app can scale if placed behind a load balancer
-  thrive:
+  thrive-app:
     image: thriveitcr/thrive-app:latest
     ports:
     - 81:8306
     environment:
-      SERVICE_NAME: thrive
+      SERVICE_NAME: thrive-app
 #    volumes:
 #      - "${DEV_FRONTEND_DIR}:/rt106"
   # analytics can scale (but we cannot expose the port to the host, but still to list a port for Registrator to recognize)
