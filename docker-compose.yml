@@ -71,14 +71,14 @@ services:
       MSG_SYSTEM: amqp
       SERVICE_NAME: wavelet-nuclei-segmentation--v1_0_0
       SERVICE_TAGS: analytic
-#  WholeCellSegmentation:
-#    image: rt106/whole-cell-segmentation:latest
-#    ports:
-#    - 7106
-#    environment:
-#      MSG_SYSTEM: amqp
-#      SERVICE_NAME: WholeCellSegmentation--v1_0_0
-#      SERVICE_TAGS: analytic
+  whole-cell-segmentation:
+    image: thriveitcr/whole-cell-segmentation:latest
+    ports:
+    - 7106
+    environment:
+      MSG_SYSTEM: amqp
+      SERVICE_NAME: whole-cell-segmentation--v1_0_0
+      SERVICE_TAGS: analytic
   multi-compartment-cell-quantification:
     image: thriveitcr/multi-compartment-cell-quantification:latest
     ports:
