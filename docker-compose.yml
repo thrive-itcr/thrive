@@ -99,14 +99,14 @@ services:
       MSG_SYSTEM: amqp
       SERVICE_NAME: simple-heterogeneity-metrics--v1_0_0
       SERVICE_TAGS: analytic
-  return-rgb-file:
-    image: rt106/return-rgb-file:latest
-    ports:
-    - 7106
-    environment:
-      MSG_SYSTEM: amqp
-      SERVICE_NAME: return-rgb-file--v1_0_0
-      SERVICE_TAGS: analytic
+#  return-rgb-file:
+#    image: rt106/return-rgb-file:latest
+#    ports:
+#    - 7106
+#    environment:
+#      MSG_SYSTEM: amqp
+#      SERVICE_NAME: return-rgb-file--v1_0_0
+#      SERVICE_TAGS: analytic
 
 volumes:
   rt106-mysql-volume:
