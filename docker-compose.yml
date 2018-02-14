@@ -45,7 +45,7 @@ services:
       MYSQL_ROOT_PASSWORD: rt106mysql
   # web server can scale if we put in a load balancer
   web:
-    image: thrive-itcr/rt106-frontend:latest
+    image: thriveitcr/rt106-frontend:latest
     ports:
     - 80:8106
     environment:
