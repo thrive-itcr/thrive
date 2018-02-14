@@ -45,11 +45,14 @@ services:
       MYSQL_ROOT_PASSWORD: rt106mysql
   # web server can scale if we put in a load balancer
   web:
-    image: rt106/rt106-frontend:latest
+    image: thrive-itcr/rt106-frontend:latest
     ports:
     - 80:8106
     environment:
       SERVICE_NAME: web
+      Rt106_SERVER_HOST: ${Rt106_SERVER_HOST}
+#    volumes:
+#      - "${DEV_FRONTEND_DIR}:/rt106"
     depends_on:
     - "rabbitmq"
   # web server for seed app can scale if placed behind a load balancer
@@ -59,8 +62,9 @@ services:
     - 81:8306
     environment:
       SERVICE_NAME: thrive-app
+      Rt106_SERVER_HOST: ${Rt106_SERVER_HOST}
 #    volumes:
-#      - "${DEV_FRONTEND_DIR}:/rt106"
+#      - "${DEV_THRIVE_FRONTEND_DIR}:/rt106"
   # analytics can scale (but we cannot expose the port to the host, but still to list a port for Registrator to recognize)
   #   the DNS in Consul will provide a unique port number to route through
   wavelet-nuclei-segmentation:
@@ -94,6 +98,14 @@ services:
     environment:
       MSG_SYSTEM: amqp
       SERVICE_NAME: simple-heterogeneity-metrics--v1_0_0
+      SERVICE_TAGS: analytic
+  return-rgb-file:
+    image: rt106/return-rgb-file:latest
+    ports:
+    - 7106
+    environment:
+      MSG_SYSTEM: amqp
+      SERVICE_NAME: return-rgb-file--v1_0_0
       SERVICE_TAGS: analytic
 
 volumes:
