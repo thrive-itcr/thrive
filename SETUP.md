@@ -49,7 +49,7 @@ In your console you will see many diagnostic messages from all the Docker contai
 Startup may take a couple of minutes, especially the first time which sets up and initializes the THRIVE database.
 
 ## Try it out
-Assuming the steps above were successful, start a web browser (Chrome recommended).  Go to http://localhost:81.  You should see THRIVE running in the browser.
+Assuming the steps above were successful, start a web browser (Chrome recommended).  Go to http://localhost.  You should see THRIVE running in the browser.
 
 For a sample scenario that you can run with THRIVE, see the sample video.  (Coming soon!)
 
