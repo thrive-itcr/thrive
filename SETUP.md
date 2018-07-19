@@ -27,9 +27,13 @@ Within your directory that contains the file docker-compose.yml (see Prerequisit
 
 ```
 LOCAL_DATA_DIR=/your/data/root
+Rt106_SERVER_HOST=localhost
 ```
 
 (There are other environment variable options, but this setting will allow you to run the basic THRIVE application.)
+
+NOTE:  Setting Rt106_SERVER_HOST to hostname will enable you to run on your same computer.  If 
+you instead set Rt106_SERVER_HOST to be a hostname or IP address, you can run THRIVE as a remote web-based server.
 
 Be sure to set /your/data/root to the path at the top of your data directory structure from the previous step, perhaps ending in __THRIVEdata__.
 
