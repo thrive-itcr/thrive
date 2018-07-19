@@ -63,8 +63,8 @@ services:
     environment:
       SERVICE_NAME: thrive-app
       Rt106_SERVER_HOST: ${Rt106_SERVER_HOST}
-    volumes:
-      - "${DEV_THRIVE_FRONTEND_DIR}:/rt106"
+#    volumes:
+#      - "${DEV_THRIVE_FRONTEND_DIR}:/rt106"
   # analytics can scale (but we cannot expose the port to the host, but still to list a port for Registrator to recognize)
   #   the DNS in Consul will provide a unique port number to route through
   wavelet-nuclei-segmentation:
