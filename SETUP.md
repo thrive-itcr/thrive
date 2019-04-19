@@ -70,6 +70,27 @@ It is good practice to also clean up docker by running:
 ```
 docker-compose down
 ```
+A convenient use of the multiprocessing capability is the "Process All Regions" button
+which iterates through all regions on the current slide and submits requests to run
+the selected algorithm.  The THRIVE architecture scales to use all running Docker containers
+in parallel.
+
+## Multiprocessing
+
+THRIVE can be launched with multiple instances of any of its Docker containers that
+perform analysis.  For example to run with 5 copies of the cell quantification
+Docker container and 5 copies of the container that calculates simple heterogeneity
+metrics, use this command to start the system:
+```
+docker-compose up --scale multi-compartment-cell-quantification=5 --scale simple-heterogeneity-metrics=5
+```
+The names of the containers are the names used in the docker-compose.yml file.
+
+The system is shut down in the same way as before:
+```
+docker-compose down
+```
+
 
 ## Developing new capabilities for THRIVE
 
