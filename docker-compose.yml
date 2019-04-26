@@ -99,6 +99,15 @@ services:
       MSG_SYSTEM: amqp
       SERVICE_NAME: simple-heterogeneity-metrics--v1_0_0
       SERVICE_TAGS: analytic
+  multi-omics-heterogeneity-analysis:
+    image: thriveitcr/multi-omics-heterogeneity-analysis:latest
+    ports:
+      - 7106
+    environment:
+      MSG_SYSTEM: amqp
+      SERVICE_NAME: multi-omics-heterogeneity-analysis--v1_0_0
+      SERVICE_TAGS: analytic
+
 #  return-rgb-file:
 #    image: rt106/return-rgb-file:latest
 #    ports:
