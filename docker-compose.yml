@@ -43,6 +43,15 @@ services:
     - rt106-mysql-volume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: rt106mysql
+  # thrive-mysql is mapped to external port 3307 to avoid conflict with mysql image above.
+  thrive-mysql:
+    image: thriveitcr/thrive-mysql:latest
+    ports:
+      - 3307:3306
+    volumes:
+      - thrive-mysql-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: thrivemysql
   # web server can scale if we put in a load balancer
   web:
     image: thriveitcr/rt106-frontend:latest
@@ -119,3 +128,4 @@ services:
 
 volumes:
   rt106-mysql-volume:
+  thrive-mysql-volume:
