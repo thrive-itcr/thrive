@@ -33,19 +33,13 @@ See the [THRIVE project web site](http://www.csb.pitt.edu/ith/index.html).
 * Algorithm executions are tracked in a database for later reference.
 * Initial set of automated quality tests.
 
-## THRIVE Roadmap
+## Possible Future THRIVE Improvements (but are not currently funded nor planned)
 
-* Q1 2018
-  * Initial deployment in github and Dockerhub to solicit community feedback.
-  * Runs against provided sample dataset.
-* Q2 2018
   * Tools for uploading user-provided pathology images.
   * Additional algorithms for intra-cellular heterogeneity.
   * Expanded set of automated system tests to ensure quality.
-* Q3 2018
   * Hands-on support for beta users to contribute more heterogeneity algorithms.
   * Tools for capturing community feedback on algorithms.
-* Q4 2018 and beyond (to be prioritized based on user community input)
   * Machine-learning capability to classify cell types.
   * Whole-slide image viewing.
   * Whole-slide image analytics.
@@ -55,7 +49,7 @@ See the [THRIVE project web site](http://www.csb.pitt.edu/ith/index.html).
   
 --------------------------------
 
-Please send inquiries to [Brion Sarachan (GE)](mailto:sarachan@ge.com) and [Chakra Chenubhotla (UPitt)](mailto:chakracs@pitt.edu)
+Please send inquiries to [Brion Sarachan (GE, retired)](mailto:bsarachan@gmail.com) and [Chakra Chenubhotla (UPitt)](mailto:chakracs@pitt.edu)
 
 
 

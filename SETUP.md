@@ -55,10 +55,7 @@ Startup may take a couple of minutes, especially the first time which sets up an
 ## Try it out
 Assuming the steps above were successful, start a web browser (Chrome recommended).  Go to http://localhost.  You should see THRIVE running in the browser.
 
-For a sample scenario that you can run with THRIVE, see the sample video.  (Coming soon!)
-
-If you experience any issues with THRIVE, for the time being, please contact [Brion Sarachan](mailto:sarachan@ge.com) and [Chakra Chennubhotla](mailto:chakracs@pitt.edu).
-In the near future we will be establishing a more formal method for logging issues.
+If you experience any issues with THRIVE, please contact [Brion Sarachan](mailto:bsarachan@gmail.com) and [Chakra Chennubhotla](mailto:chakracs@pitt.edu).
 
 ## Shut down THRIVE
 
@@ -102,7 +99,7 @@ You could contribute capabilities to THRIVE in several ways:
 Each of these will be briefly described below.
 
 For any of these changes, please coordinate with the THRIVE team 
-(contacts [Brion Sarachan](mailto:sarachan@ge.com) and [Chakra Chennubhotla](mailto:chakracs@pitt.edu)) on how to have your changes 
+(contacts [Brion Sarachan](mailto:bsarachan@gmail.com) and [Chakra Chennubhotla](mailto:chakracs@pitt.edu)) on how to have your changes 
 added to the THRIVE release.
 
 ### Adding a new algorithm.

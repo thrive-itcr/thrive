@@ -164,4 +164,4 @@ These are standard options for Docker Compose and are further documented here:  
 -----------------------------------------------------------------------------------------
 
 
-For questions and help about these instructions, please contact [Jim Miller](mailto:millerjv@ge.com) and / or [Brion Sarachan](mailto:sarachan@ge.com).
+For questions and help about these instructions, please contact [Jim Miller](mailto:millerjv@ge.com).
